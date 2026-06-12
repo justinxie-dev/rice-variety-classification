@@ -1,6 +1,6 @@
 def create_train_test(csv_dataset):
     """
-    Create 75% train and 25% test datasets from the given CSV dataset.
+    Create 75% train and 25% test datasets from the given CSV dataset
     """
     import pandas as pd
     from sklearn.model_selection import train_test_split
@@ -8,7 +8,7 @@ def create_train_test(csv_dataset):
     # Load the dataset from the CSV file into a Pandas DataFrame
     df = pd.read_csv(csv_dataset)
 
-    # Split the DataFrame into features (X) and target variable (y)
+    # Split the DataFrame into features (X) and class/label (y)
     X = df.drop(columns=['class', 'label']).to_numpy()
     y = df.label.to_numpy()
 
